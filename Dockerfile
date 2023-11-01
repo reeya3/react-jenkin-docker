@@ -5,8 +5,7 @@ COPY package.json .
 RUN npm install
 COPY . .
 RUN npm run build
-CMD ["npm", "start"]
-
+CMD ["docker", "run", "--rm", "react-jenkins"]
 # #nginx block
 
 # FROM nginx:1.20.0-alpine
