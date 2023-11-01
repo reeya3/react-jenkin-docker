@@ -1,0 +1,23 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.heading{
+  color: #ff9ff1;
+  font-family: 'Square Peg', cursive;
+  font-size: 2rem;
+  margin: 50px 50px;
+}
+
+.img_div {
+  display: flex;
+  justify-content: center;
+
+}
+
+.img_div img{
+  width: 200px;
+  height: 150px;
+}
