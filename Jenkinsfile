@@ -15,7 +15,7 @@ pipeline {
 
     stage('build') {
       steps {
-        sh 'docker build -t myreactapp:latestÂ /Users/rajivmanandhar/first-react-app/Dockerfile .'
+        sh 'docker build -t myreactapp:latestÂ /Users/rajivmanandhar/.jenkins/workspace/jenkins-docker-react-app/Dockerfile .'
       }
     }
 
