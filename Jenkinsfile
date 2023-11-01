@@ -24,5 +24,11 @@ pipeline {
       }
     }
 
+    stage('build') {
+      steps {
+        sh 'docker build -t myreactapp:latest /Users/rajivmanandhar/first-react-app/Dockerfile .'
+      }
+    }
+
   }
 }
