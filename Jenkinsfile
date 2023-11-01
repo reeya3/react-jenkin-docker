@@ -8,25 +8,14 @@ pipeline {
     }
 
     stage('log') {
-      parallel {
-        stage('log') {
-          steps {
-            sh 'ls -la'
-          }
-        }
-
-        stage('react-app') {
-          steps {
-            sh 'npm i && npm start'
-          }
-        }
-
+      steps {
+        sh 'ls -la'
       }
     }
 
     stage('build') {
       steps {
-        sh 'docker build -t myreactapp:latest /Users/rajivmanandhar/first-react-app/Dockerfile .'
+        sh 'docker build -t myreactapp:latestÂ /Users/rajivmanandhar/first-react-app/Dockerfile .'
       }
     }
 
