@@ -44,7 +44,7 @@ pipeline {
 
     stage('dockerhub push') {
       steps {
-        sh 'docker push reeya3/react-app'
+        sh 'docker push react-app'
       }
     }
 
