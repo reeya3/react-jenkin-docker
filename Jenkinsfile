@@ -32,5 +32,15 @@ pipeline {
       }
     }
 
+    stage('dockerhub login') {
+      environment {
+        DOCKERHUB_UNAME = 'reeya3'
+        DOCKERHUB_PASSWD = 'Resra@08m'
+      }
+      steps {
+        sh 'docker login -u $DOCKERHUB_UNAME -p $DOCKERHUB_PASSWD'
+      }
+    }
+
   }
 }
