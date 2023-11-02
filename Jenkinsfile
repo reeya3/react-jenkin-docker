@@ -15,7 +15,7 @@ pipeline {
 
     stage('build') {
       steps {
-        sh 'docker build -t react-app/latest .'
+        sh 'docker build -t react-app:latest .'
       }
     }
 
