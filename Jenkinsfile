@@ -8,8 +8,21 @@ pipeline {
     }
 
     stage('check') {
-      steps {
-        sh 'ls -la'
+      parallel {
+        stage('check') {
+          steps {
+            sh '''ls -la
+
+'''
+          }
+        }
+
+        stage('mysql') {
+          steps {
+            sh 'npm install mysql --save'
+          }
+        }
+
       }
     }
 
