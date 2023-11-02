@@ -8,19 +8,14 @@ pipeline {
     }
 
     stage('check') {
-      parallel {
-        stage('check') {
-          steps {
-            sh 'ls -la'
-          }
-        }
+      steps {
+        sh 'ls -la'
+      }
+    }
 
-        stage('npm i') {
-          steps {
-            sh 'npm install & npm start'
-          }
-        }
-
+    stage('build') {
+      steps {
+        sh 'docker build -f /Users/rajivmanandhar/first-react-app/Dockerfile .'
       }
     }
 
