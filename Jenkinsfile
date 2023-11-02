@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    dockerfile {
+      filename 'Dockerfile'
+    }
+
+  }
   stages {
     stage('git') {
       steps {
@@ -15,7 +20,7 @@ pipeline {
 
     stage('build') {
       steps {
-        sh 'docker build -f react-app:latest react-jenkin-docker/Dockerfile .'
+        sh 'docker build -f react-app:latestÂ react-jenkin-docker/Dockerfile .'
       }
     }
 
