@@ -35,10 +35,16 @@ pipeline {
     stage('dockerhub login') {
       environment {
         DOCKERHUB_UNAME = 'reeya3'
-        DOCKERHUB_PASSWD = 'Resra@08m'
+        DOCKERHUB_PASSWD = 'Resta@08m'
       }
       steps {
         sh 'docker login -u $DOCKERHUB_UNAME -p $DOCKERHUB_PASSWD'
+      }
+    }
+
+    stage('dockerhub push') {
+      steps {
+        sh 'docker push reeya3/react-app:v1'
       }
     }
 
