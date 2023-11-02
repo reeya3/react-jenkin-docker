@@ -1,5 +1,5 @@
 #node block
-FROM node:alpine3.17 as nodework
+FROM node:latest as nodework
 WORKDIR /myapp
 COPY package.json .
 RUN npm install
