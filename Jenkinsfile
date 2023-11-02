@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('git') {
       steps {
-        git(url: 'https://github.com/reeya3/react-jenkin-docker.git', branch: 'main', poll: true)
+        git(url: 'https://github.com/reeya3/react-jenkin-docker', branch: 'main')
       }
     }
 
