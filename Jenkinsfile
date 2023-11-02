@@ -20,7 +20,7 @@ pipeline {
 
     stage('build') {
       steps {
-        sh 'docker build -f react-app:latest react-jenkin-docker/Dockerfile .'
+        sh 'docker.build("react-app:latest", "-f Dockerfile .")'
       }
     }
 
