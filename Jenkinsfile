@@ -19,5 +19,11 @@ pipeline {
       }
     }
 
+    stage('dockerhub login') {
+      steps {
+        sh 'docker login'
+      }
+    }
+
   }
 }
