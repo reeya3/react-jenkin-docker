@@ -7,5 +7,11 @@ pipeline {
       }
     }
 
+    stage('install mysql') {
+      steps {
+        sh 'npm install mysql --save'
+      }
+    }
+
   }
 }
