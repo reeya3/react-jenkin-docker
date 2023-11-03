@@ -25,5 +25,25 @@ pipeline {
       }
     }
 
+    stage('docker tag') {
+      parallel {
+        stage('docker tag') {
+          steps {
+            sh '''docker tag react-app reeya3/react-app:latest
+
+
+'''
+          }
+        }
+
+        stage('docker push') {
+          steps {
+            sh 'docker push reeya3/react-app:latest'
+          }
+        }
+
+      }
+    }
+
   }
 }
